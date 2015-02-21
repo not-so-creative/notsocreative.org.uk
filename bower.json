@@ -1,0 +1,25 @@
+{
+  "name": "notsocreative.co.uk",
+  "version": "0.1.0",
+  "homepage": "notsocreative.org.uk",
+  "authors": [
+    "William Duyck <fuzzyfox0@gmail.com>"
+  ],
+  "description": "Not So Creative's landing site",
+  "license": "MPL-2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "bootswatch": "~3.3.2",
+    "font-awesome": "~4.3.0",
+    "openwebicons": "~1.3.1"
+  }
+}

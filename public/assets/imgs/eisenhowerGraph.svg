@@ -1,0 +1,98 @@
+<svg y="0px" x="0px" viewBox="0 0 500 500"
+  xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" id="eisenhowerGraphSvg" style="background: #fff">
+  <g>
+    <line stroke-width="1" stroke="#444444" y2="250" x2="480" y1="250" x1="20"></line>
+    <line stroke-width="1" stroke="#444444" y2="480" x2="250" y1="20" x1="250"></line>
+    <path style="fill: rgb(68, 68, 68); stroke: rgb(68, 68, 68);" d="M250 20C254 28 258 30 252 32L250 31L248 32C242 30 246 28 250 20z "></path>
+    <path style="fill: rgb(68, 68, 68); stroke: rgb(68, 68, 68);" d="M480 250C472 254 470 258 468 252L469 250L468 248C470 242 472 246 480 250z "></path>
+    <text y="-7.107187271118164" x="213.82411575317383" fill="#aaa" font-family="inherit, Helvetica, Arial, sans-serif">
+      <tspan x="213.82411575317383" dy="20.8">Most Urgent</tspan>
+    </text>
+    <text y="472.89281272888184" x="212.01874160766602" fill="#aaa" font-family="inherit, Helvetica, Arial, sans-serif">
+      <tspan x="212.01874160766602" dy="20.8">Least Urgent</tspan>
+    </text>
+    <text transform="rotate(90 489.179386138916 250.00000095367432)" y="232.89281272888184" x="445.898250579834" fill="#aaa" font-family="inherit, Helvetica, Arial, sans-serif">
+      <tspan x="445.898250579834" dy="20.8">Most Important</tspan>
+    </text>
+    <text transform="rotate(-90 9.179374694824219 250.00000095367432)" y="232.89281272888184" x="-35.907127380371094" fill="#aaa" font-family="inherit, Helvetica, Arial, sans-serif">
+      <tspan x="-35.907127380371094" dy="20.8">Least Important</tspan>
+    </text>
+  </g>
+  <g>
+    <g transform="translate(375.9909973144531 23.73874282836914)" class="plot">
+      <ellipse fill="#6f93d7" cy="15" cx="15" ry="15" rx="15"></ellipse>
+      <text y="-0.8450441360473633" x="11.599099159240723" fill="#ffffff" font-family="FontAwesome">
+        <tspan x="11.599099159240723" dy="20.8"></tspan>
+      </text>
+    </g>
+    <g transform="translate(354.3693542480469 65.18019104003906)" class="plot">
+      <ellipse fill="#a59b99" cy="15" cx="15" ry="15" rx="15"></ellipse>
+      <text y="-0.8450441360473633" x="6.599099159240723" fill="#ffffff" font-family="FontAwesome">
+        <tspan x="6.599099159240723" dy="20.8"></tspan>
+      </text>
+    </g>
+    <g transform="translate(399.4143981933594 118.33334350585938)" class="plot">
+      <ellipse fill="#bacfaf" cy="15" cx="15" ry="15" rx="15"></ellipse>
+      <text y="-0.8450441360473633" x="8.100600719451904" fill="#ffffff" font-family="FontAwesome">
+        <tspan x="8.100600719451904" dy="20.8"></tspan>
+      </text>
+    </g>
+    <g transform="translate(220.1351318359375 185.90090942382812)" class="plot">
+      <ellipse fill="#b97c72" cy="15" cx="15" ry="15" rx="15"></ellipse>
+      <text y="-0.8450441360473633" x="10.097597599029541" fill="#ffffff" font-family="FontAwesome">
+        <tspan x="10.097597599029541" dy="20.8"></tspan>
+      </text>
+    </g>
+    <g transform="translate(254.36935424804688 205.72073364257812)" class="plot">
+      <ellipse fill="#93a8b1" cy="15" cx="15" ry="15" rx="15"></ellipse>
+      <text y="-0.8450441360473633" x="6.599099159240723" fill="#ffffff" font-family="FontAwesome">
+        <tspan x="6.599099159240723" dy="20.8"></tspan>
+      </text>
+    </g>
+    <g transform="translate(420.1351013183594 248.96395874023438)" class="plot">
+      <ellipse fill="#918abb" cy="15" cx="15" ry="15" rx="15"></ellipse>
+      <text y="-0.8450441360473633" x="7.102102279663086" fill="#ffffff" font-family="FontAwesome">
+        <tspan x="7.102102279663086" dy="20.8"></tspan>
+      </text>
+    </g>
+    <g transform="translate(315.630615234375 306.6216125488281)" class="plot">
+      <ellipse fill="#c9759d" cy="15" cx="15" ry="15" rx="15"></ellipse>
+      <text y="-0.8450441360473633" x="8.603603839874268" fill="#ffffff" font-family="FontAwesome">
+        <tspan x="8.603603839874268" dy="20.8"></tspan>
+      </text>
+    </g>
+    <g transform="translate(166.98196411132812 319.2342529296875)" class="plot">
+      <ellipse fill="#a7cb7f" cy="15" cx="15" ry="15" rx="15"></ellipse>
+      <text y="-0.8450441360473633" x="7.597598075866699" fill="#ffffff" font-family="FontAwesome">
+        <tspan x="7.597598075866699" dy="20.8"></tspan>
+      </text>
+    </g>
+  </g>
+
+  <script type="text/javascript">
+    (function(){
+      function randomColor() {
+        var getVal = function() {
+          return ( Math.round( Math.random() * 110 ) + 110 ).toString( 16 );
+        };
+
+        return '#' + getVal() + getVal() + getVal();
+      }
+
+      var randomCoord = function() {
+        return (Math.random() * 460) + 20;
+      }
+
+      var plots = document.querySelectorAll( '#eisenhowerGraphSvg g.plot' );
+
+      setInterval( function() {
+        var plot = plots[ Math.floor( Math.random() * plots.length ) ];
+
+        plot.setAttribute( 'transform', 'translate(' + randomCoord() + ' ' + randomCoord() + ')' );
+
+        plot.querySelector( 'ellipse').setAttribute( 'fill', randomColor() );
+      }, ( Math.random() * 700 ) + 700 );
+    })();
+  </script>
+</svg>
