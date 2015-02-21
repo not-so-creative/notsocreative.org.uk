@@ -107,6 +107,14 @@ module.exports = function( grunt ) {
         tagName: 'v%VERSION%',
         push: false
       }
+    },
+
+    // deploy to gh-pages
+    'gh-pages': {
+      options: {
+        base: 'public'
+      },
+      src: [ '**' ]
     }
   });
 
@@ -116,8 +124,10 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-less' );
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   grunt.loadNpmTasks( 'grunt-contrib-watch' );
+  grunt.loadNpmTasks( 'grunt-gh-pages' );
 
   grunt.registerTask( 'default', [ 'serve' ] );
   grunt.registerTask( 'serve', [ 'jshint', 'less:dev', 'uglify:dev', 'connect:serve', 'watch' ] );
   grunt.registerTask( 'build', [ 'jshint', 'less:prod', 'uglify:prod' ] );
+  grunt.registerTask( 'deploy', [ 'build', 'gh-pages' ] );
 };
