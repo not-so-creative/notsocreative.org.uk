@@ -1,0 +1,144 @@
+// --------------------------------------------------
+// Vendor Imports
+// --------------------------------------------------
+
+// bootstrap
+@import '../../vendor/bootstrap/less/bootstrap';
+// bootswatch
+@bootswatch-theme: 'sandstone';
+@import '../../vendor/bootswatch/@{bootswatch-theme}/variables';
+@import '../../vendor/bootswatch/@{bootswatch-theme}/bootswatch';
+// font awesome
+@import '../../vendor/font-awesome/less/font-awesome';
+@fa-font-path: '../../vendor/font-awesome/fonts';
+// open web icons
+@import '_openwebicons';
+@ow-font-path: '../../vendor/openwebicons/font';
+
+
+// --------------------------------------------------
+// typography customisations
+// --------------------------------------------------
+
+cite::before {
+  content: '–\00a0';
+}
+
+.lead {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+// --------------------------------------------------
+// site footer
+// --------------------------------------------------
+
+footer {
+  padding-top: 2.5rem;
+  &:extend( .text-muted );
+  font-size: .9em;
+}
+
+// --------------------------------------------------
+// landing page header styles
+// --------------------------------------------------
+
+body.landing {
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  & > header {
+    height: 100vh;
+    padding-top: 60px;
+    margin: 0;
+
+    transition: background-color 30s linear;
+
+    .container {
+      position: relative;
+      display: table;
+      height: 100%;
+      z-index: 20;
+
+      hgroup {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        height: 100%;
+
+        .btn {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+
+  main {
+    & > section {
+      padding: 5rem 0;
+    }
+  }
+}
+
+// --------------------------------------------------
+// animated nav-bar
+// --------------------------------------------------
+
+.navbar-animated {
+  transition: all .4s linear;
+
+  .navbar-header, .navbar-nav li.top {
+    transition: opacity .4s linear;
+  }
+
+  &.navbar-transparent {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+
+    .navbar-header, .navbar-nav li.top {
+      opacity: 0;
+    }
+  }
+}
+
+// --------------------------------------------------
+// about section styles
+// --------------------------------------------------
+
+#about {
+  text-align: center;
+  background-color: @brand-primary;
+  color: @btn-primary-color;
+
+  h2 {
+    color: inherit;
+  }
+}
+
+// --------------------------------------------------
+// team section styles
+// --------------------------------------------------
+
+#team {
+  text-align: center;
+  background-color: @well-bg;
+
+  header {
+    margin-bottom: 2.5rem;
+  }
+
+  footer {
+    margin-top: 2.5rem;
+  }
+
+  .team-member {
+    & > img:first-child {
+      &:extend( .img-circle );
+      &:extend( .img-thumbnail );
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+}
