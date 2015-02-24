@@ -3,6 +3,7 @@
 public/vendor
 public/assets/css
 public/assets/js/site.js
+*.map
 
 
 ### https://raw.github.com/github/gitignore/32c88e2a46c2a74f4c2d030bfd85ceb08a6b65b7/Global/OSX.gitignore
@@ -59,5 +60,3 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
-
-
